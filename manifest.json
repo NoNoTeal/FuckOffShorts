@@ -1,0 +1,25 @@
+{
+    "name": "Fuck Off Shorts!",
+    "version": "1.0",
+    "description": "Prevents Youtube from using Shorts by changing the URL.",
+    "author": "xTeal",
+    "host_permissions": [
+      "*://*.youtube.com/shorts/*",
+      "*://youtube.com/shorts/*"
+    ],
+    "icons": { 
+      "16": "/icns/activeIcon/activeIcon16px.png",
+      "32": "/icns/activeIcon/activeIcon32px.png",
+      "48": "/icns/activeIcon/activeIcon48px.png",
+      "128": "/icns/activeIcon/activeIcon128px.png" 
+      },
+    "content_scripts": [{
+      "matches": [
+        "*://*.youtube.com/shorts/*",
+        "*://youtube.com/shorts/*"
+      ],
+      "js": ["scripts/inject.js"],
+      "run_at": "document_end"
+    }],
+    "manifest_version": 3
+}
